@@ -3,6 +3,15 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
+interface Particle {
+  x: number;
+  y: number;
+  size: number;
+  speedX: number;
+  speedY: number;
+  color: string;
+}
+
 export default function ParticlesBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | null>(null);
@@ -22,48 +31,39 @@ export default function ParticlesBackground() {
     if (!ctx) return;
 
     // Create particles
-    const particles: any[] = [];
-    const particleCount = Math.floor(window.innerWidth / 20); // Responsive particle count
-
-    class Particle {
-      x: number;
-      y: number;
-      size: number;
-      speedX: number;
-      speedY: number;
-      color: string;
-
-      constructor() {
-        this.x = Math.random() * canvas!.width;
-        this.y = Math.random() * canvas!.height;
-        this.size = Math.random() * 3 + 1;
-        this.speedX = Math.random() * 1 - 0.5;
-        this.speedY = Math.random() * 1 - 0.5;
-        this.color = `hsla(${Math.random() * 60 + 200}, 100%, 70%, ${Math.random() * 0.5 + 0.3})`;
-      }
-
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        // Bounce off edges
-        if (this.x < 0 || this.x > canvas!.width) this.speedX *= -1;
-        if (this.y < 0 || this.y > canvas!.height) this.speedY *= -1;
-      }
-
-      draw() {
-        ctx!.beginPath();
-        ctx!.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx!.fillStyle = this.color;
-        ctx!.fill();
-      }
-    }
+    const particles: Particle[] = [];
+    const particleCount = Math.floor(window.innerWidth / 20);
 
     // Initialize particles
     const init = () => {
       for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 3 + 1,
+          speedX: Math.random() * 1 - 0.5,
+          speedY: Math.random() * 1 - 0.5,
+          color: `hsla(${Math.random() * 60 + 200}, 100%, 70%, ${Math.random() * 0.5 + 0.3})`
+        });
       }
+    };
+
+    // Update particle position
+    const updateParticle = (particle: Particle) => {
+      particle.x += particle.speedX;
+      particle.y += particle.speedY;
+
+      // Bounce off edges
+      if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
+      if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
+    };
+
+    // Draw particle
+    const drawParticle = (particle: Particle) => {
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+      ctx.fillStyle = particle.color;
+      ctx.fill();
     };
 
     // Connect nearby particles
@@ -75,12 +75,12 @@ export default function ParticlesBackground() {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 120) {
-            ctx!.strokeStyle = `hsla(200, 100%, 70%, ${1 - distance / 120})`;
-            ctx!.lineWidth = 0.8;
-            ctx!.beginPath();
-            ctx!.moveTo(particles[a].x, particles[a].y);
-            ctx!.lineTo(particles[b].x, particles[b].y);
-            ctx!.stroke();
+            ctx.strokeStyle = `hsla(200, 100%, 70%, ${1 - distance / 120})`;
+            ctx.lineWidth = 0.8;
+            ctx.beginPath();
+            ctx.moveTo(particles[a].x, particles[a].y);
+            ctx.lineTo(particles[b].x, particles[b].y);
+            ctx.stroke();
           }
         }
       }
@@ -88,12 +88,12 @@ export default function ParticlesBackground() {
 
     // Animation loop
     const animate = () => {
-      ctx!.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      for (let i = 0; i < particles.length; i++) {
-        particles[i].update();
-        particles[i].draw();
-      }
+      particles.forEach(particle => {
+        updateParticle(particle);
+        drawParticle(particle);
+      });
 
       connectParticles();
       animationRef.current = requestAnimationFrame(animate);
@@ -105,6 +105,8 @@ export default function ParticlesBackground() {
     // Handle resize
     const handleResize = () => {
       resizeCanvas();
+      particles.length = 0; // Clear particles
+      init(); // Reinitialize particles
     };
 
     window.addEventListener('resize', handleResize);
