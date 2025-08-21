@@ -1,0 +1,13 @@
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); */
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+.glow-text {
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.7);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(167, 139, 250, 0.5);
+}
