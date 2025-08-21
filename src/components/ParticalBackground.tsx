@@ -3,15 +3,6 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-interface Particle {
-  x: number;
-  y: number;
-  size: number;
-  speedX: number;
-  speedY: number;
-  color: string;
-}
-
 export default function ParticlesBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | null>(null);
@@ -31,7 +22,7 @@ export default function ParticlesBackground() {
     if (!ctx) return;
 
     // Create particles
-    const particles: Particle[] = [];
+    const particles: any[] = [];
     const particleCount = Math.floor(window.innerWidth / 20); // Responsive particle count
 
     class Particle {

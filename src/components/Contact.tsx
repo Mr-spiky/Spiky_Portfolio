@@ -40,7 +40,7 @@ export default function Contact() {
 
       setSubmitStatus({
         success: true,
-        message: 'Message sent successfully! I\'ll get back to you soon.'
+        message: 'Message sent successfully! I&apos;ll get back to you soon.'
       });
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
@@ -66,7 +66,7 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">
-            Let's <span className="text-blue-400">Create Magic</span> Together
+            Let&apos;s <span className="text-blue-400">Create Magic</span> Together
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Open to internships, freelance projects, and collaborations. Typically respond within 1 day.
@@ -258,7 +258,7 @@ export default function Contact() {
 
               <div className="mt-12 p-4 bg-gray-800/50 rounded-lg border-l-4 border-blue-500">
                 <p className="text-gray-300 italic">
-                  "If you&apos;ve reached here, thank you for seeing my story. Let&apos;s build something great together."
+                  &quot;If you&apos;ve reached here, thank you for seeing my story. Let&apos;s build something great together.&quot;
                 </p>
                 <p className="mt-2 text-sm text-gray-400">— Shivam Kumar (Spiky)</p>
               </div>

@@ -106,7 +106,7 @@ export default function About() {
               className="mt-12 p-4 border-l-4 border-blue-500 bg-gray-800/30 rounded-r-lg"
             >
               <p className="italic text-gray-300">
-                "The journey from Google search to GitHub commits changed everything."
+                &quot;The journey from Google search to GitHub commits changed everything.&quot;
               </p>
             </motion.div>
           </div>

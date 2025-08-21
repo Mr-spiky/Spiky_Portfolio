@@ -169,7 +169,7 @@ export default function Navbar() {
                 transition={{ delay: 0.7 }}
                 className="mt-12 text-center text-gray-500 text-sm"
               >
-                <p>Let's build something amazing together!</p>
+                <p>Let&apos;s build something amazing together!</p>
               </motion.div>
             </div>
           </motion.div>
