@@ -258,7 +258,7 @@ export default function Contact() {
 
               <div className="mt-12 p-4 bg-gray-800/50 rounded-lg border-l-4 border-blue-500">
                 <p className="text-gray-300 italic">
-                  "If you've reached here, thank you for seeing my story. Let's build something great together."
+                  "If you&apos;ve reached here, thank you for seeing my story. Let&apos;s build something great together."
                 </p>
                 <p className="mt-2 text-sm text-gray-400">— Shivam Kumar (Spiky)</p>
               </div>

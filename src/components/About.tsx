@@ -57,7 +57,7 @@ export default function About() {
 
             <div className="space-y-4 text-gray-300">
               <p>
-                <span className="text-xl font-medium">Hi, I'm Shivam Kumar</span>, a passionate web developer currently pursuing BCA from IGNOU.
+                <span className="text-xl font-medium">Hi, I&apos;m Shivam Kumar</span>, a passionate web developer currently pursuing BCA from IGNOU.
               </p>
               
               <p>
@@ -67,7 +67,7 @@ export default function About() {
               </p>
               
               <p className="pt-2">
-                I'm open to <span className="font-medium text-blue-400">internships</span>, <span className="font-medium text-blue-400">freelance projects</span>, 
+                I&apos;m open to <span className="font-medium text-blue-400">internships</span>, <span className="font-medium text-blue-400">freelance projects</span>, 
                 and <span className="font-medium text-blue-400">collaborations</span>.
               </p>
             </div>
