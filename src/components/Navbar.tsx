@@ -27,10 +27,10 @@ export default function Navbar() {
   ];
 
   const socialLinks = [
-    { icon: <FiGithub className="w-5 h-5" />, href: 'https://github.com/spiky' },
-    { icon: <FiLinkedin className="w-5 h-5" />, href: 'https://linkedin.com/in/spiky' },
+    { icon: <FiGithub className="w-5 h-5" />, href: 'https://github.com/Mr-spiky' },
+    { icon: <FiLinkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/shivam-gupta-58b63b32a/' },
     { icon: <FaTelegramPlane className="w-5 h-5" />, href: 'https://t.me/spiky' },
-    { icon: <FiMail className="w-5 h-5" />, href: 'mailto:shivam@example.com' },
+    { icon: <FiMail className="w-5 h-5" />, href: 'mailto:mrspiky1125@gmail.com' },
   ];
 
   return (

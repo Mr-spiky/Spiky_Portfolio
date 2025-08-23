@@ -8,10 +8,10 @@ import { HiOutlineMail } from 'react-icons/hi';
 
 export default function Hero() {
   const socialLinks = [
-    { icon: <FaGithub className="w-5 h-5" />, url: "https://github.com/spiky" },
-    { icon: <FaLinkedin className="w-5 h-5" />, url: "https://linkedin.com/in/spiky" },
+    { icon: <FaGithub className="w-5 h-5" />, url: "https://github.com/Mr-spiky" },
+    { icon: <FaLinkedin className="w-5 h-5" />, url: "https://www.linkedin.com/in/shivam-gupta-58b63b32a/" },
     { icon: <FaTwitter className="w-5 h-5" />, url: "https://twitter.com/spiky" },
-    { icon: <HiOutlineMail className="w-5 h-5" />, url: "mailto:shivam@example.com" }
+    { icon: <HiOutlineMail className="w-5 h-5" />, url: "mailto:mrspiky1125@gmail.com" }
   ];
 
   return (

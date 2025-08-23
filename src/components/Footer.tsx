@@ -9,10 +9,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <FiGithub />, url: "https://github.com/spiky", label: "GitHub" },
-    { icon: <FiLinkedin />, url: "https://linkedin.com/in/spiky", label: "LinkedIn" },
-    { icon: <FaTelegramPlane />, url: "https://t.me/spiky", label: "Telegram" },
-    { icon: <FiMail />, url: "mailto:shivam@example.com", label: "Email" }
+    { icon: <FiGithub className="w-5 h-5" />, href: 'https://github.com/Mr-spiky' },
+    { icon: <FiLinkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/shivam-gupta-58b63b32a/' },
+    { icon: <FaTelegramPlane className="w-5 h-5" />, href: 'https://t.me/spiky' },
+    { icon: <FiMail className="w-5 h-5" />, href: 'mailto:mrspiky1125@gmail.com' },
   ];
 
   return (
@@ -36,26 +36,27 @@ export default function Footer() {
             </span>
           </div>
 
-          {/* Social Links with Creative Hover */}
-          <div className="flex justify-center gap-4 mb-6">
-            {socialLinks.map((social, index) => (
-              <motion.a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                whileHover={{ y: -3 }}
-                whileTap={{ scale: 0.9 }}
-                className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-all group relative"
+          {/* Social Links */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="flex justify-center gap-6"
               >
-                {social.icon}
-                <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                  {social.label}
-                </span>
-              </motion.a>
-            ))}
-          </div>
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="p-3 bg-gray-800 rounded-full text-gray-300 hover:text-blue-400 hover:bg-gray-700 transition-colors"
+                  >
+                    {social.icon}
+                  </motion.a>
+                ))}
+              </motion.div>
 
           {/* Compact Navigation */}
           <nav className="flex flex-wrap justify-center gap-4 mb-6">
