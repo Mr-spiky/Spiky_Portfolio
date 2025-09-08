@@ -15,7 +15,7 @@ export default function ProjectsPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gray-900 pt-20">
+      <div className="min-h-screen bg-gray-900 pt-20 text-white">
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-16">
           <div className="text-center mb-12">

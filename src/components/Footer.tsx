@@ -59,7 +59,7 @@ export default function Footer() {
               </motion.div>
 
           {/* Compact Navigation */}
-          <nav className="flex flex-wrap justify-center gap-4 mb-6">
+          <nav className="flex flex-wrap justify-center mb-6  gap-6">
             {['Home', 'About', 'Projects', 'Contact'].map((item) => (
               <Link 
                 key={item}

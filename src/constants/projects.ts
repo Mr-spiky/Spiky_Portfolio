@@ -53,5 +53,16 @@ export const featuredProjects = [
   githubUrl: "https://github.com/Mr-spiky/Todo-app",
   category: "Web App",
   status: "Completed"
+},
+{
+  id: 6,
+  title: "passOP",
+  description: "Your Own Password Manager. A secure and user-friendly password manager to store and manage your passwords safely.",
+  tech: ["React+Vite", "Node.js", "Tailwind CSS"],  // adjust based on what you used
+  image: "/images/passop.png",
+  liveUrl: "https://pass-op-gamma.vercel.app/",     // replace with your actual deployed link
+  githubUrl: "https://github.com/Mr-spiky/passOP",
+  category: "Web App",
+  status: "Completed"
 }
 ];

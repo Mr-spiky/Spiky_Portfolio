@@ -4,12 +4,15 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
-import { FaTelegramPlane } from 'react-icons/fa';
+import { FaTelegramPlane,FaCode } from 'react-icons/fa';
+
+
 import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,8 +50,9 @@ export default function Navbar() {
             {/* Logo/Brand */}
             <motion.div whileHover={{ scale: 1.05 }}>
               <Link href="#" className="flex items-center gap-2">
+              <FaCode className="text-blue-400 mr-2 group-hover:text-purple-500 transition-colors" />
                 <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                  Shivam Kumar
+                Shivam Kumar
                 </span>
                 <span className="text-xs bg-gray-700 px-2 py-1 rounded-full text-gray-300">
                   aka Spiky
