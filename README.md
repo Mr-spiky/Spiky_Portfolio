@@ -3,7 +3,7 @@
 Welcome to my personal portfolio repository!  
 This project showcases my work, skills, and journey as a **Frontend Developer**.  
 
-🌐 **Live Demo:** [View Portfolio on Vercel](https://your-vercel-link.vercel.app)  
+🌐 **Live Demo:** [View Portfolio on Vercel](https://spiky-portfolio-ojjp.vercel.app/projects)  
 
 ---
 
