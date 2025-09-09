@@ -4,7 +4,7 @@ export const featuredProjects = [
     title: "Twitter UI Clone",
     description: "A fully responsive replica of Twitter's home UI built with modern web technologies. Features real-time interactions and mobile-first design.",
     tech: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-    image: "/images/twitter-clone.png ",
+    image: "/images/twitter-clone.png",
     liveUrl: "https://mr-spiky.github.io/Twitter-clone/",
     githubUrl: "https://github.com/Mr-spiky/Twitter-clone",
     category: "Frontend",
