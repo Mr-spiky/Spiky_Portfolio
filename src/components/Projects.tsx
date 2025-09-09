@@ -19,30 +19,30 @@ export default function Projects() {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Twitter UI Clone",
-      description: "Fully responsive replica of Twitter's home UI built with Tailwind CSS",
-      tech: ["Tailwind CSS", "React", "Next.js"],
-      image: "/images/twitter-clone.png",
-      liveUrl: "https://mr-spiky.github.io/my-webite/",
-      githubUrl: "https://github.com/Mr-spiky"
+      title: "passOP",
+      description: "Your Own Password Manager. A secure and user-friendly password manager to store and manage your passwords safely.",
+      tech: ["React+Vite", "Node.js", "Tailwind CSS"],  // adjust based on what you used
+      image: "/images/passop.png",
+      liveUrl: "https://pass-op-gamma.vercel.app/",     // replace with your actual deployed link
+      githubUrl: "https://github.com/Mr-spiky/passOP"
     },
     {
       id: 2,
-      title: "NexWork (Frontend)",
-      description: "Job/community UI site with React and modern design patterns",
-      tech: ["React", "Tailwind CSS", "Context API"],
-      image: "/images/nexwork.png",
-      liveUrl: "https://nexwork-project.vercel.app/",
-      githubUrl: "https://github.com/Mr-spiky"
+      title: "CareerFinder AI",
+      description: "AI-powered career suggestion tool that analyzes user skills and preferences to recommend optimal career paths using machine learning.",
+      tech: ["Next.js", "RedisAI", "Node.js", "Machine Learning"],
+      image: "/images/career-finder.png",
+      liveUrl: "https://careerfinder.spiky.dev",
+      githubUrl: "https://github.com/Mr-spiky/CareerFinder"
     },
     {
       id: 3,
-      title: "CareerFinder AI",
-      description: "AI-based career suggestion tool with RedisAI integration in backend",
-      tech: ["Next.js", "RedisAI", "ONNX", "Node.js"],
-      image: "/images/career-finder.png",
-      liveUrl: "https://careerfinder.spiky.dev",
-      githubUrl: "https://github.com/spiky/career-finder"
+      title: "Spotify UI Clone",
+      description: "A static Spotify landing page clone built with pure HTML and CSS, showcasing clean code and UI design skills.",
+      tech: ["CSS", "JavaScrip", "HTML"],  // adjust based on what you used
+      image: "/images/spotify.png",
+      liveUrl: "https://spotify-version.vercel.app/",     // replace with your actual deployed link
+      githubUrl: "https://github.com/Mr-spiky/spotify-version"
     }
   ];
 
@@ -53,7 +53,7 @@ export default function Projects() {
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-soft-light filter blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500 rounded-full mix-blend-soft-light filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -67,7 +67,7 @@ export default function Projects() {
             Here are some of my recent works that showcase my skills and passion for development.
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
@@ -80,8 +80,8 @@ export default function Projects() {
               className="group bg-gray-800/70 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/30 transition-all duration-300"
             >
               <div className="relative h-48 overflow-hidden">
-                <Image 
-                  src={project.image} 
+                <Image
+                  src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -92,23 +92,23 @@ export default function Projects() {
                   <h3 className="text-xl font-bold text-white">{project.title}</h3>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.tech.map((tech) => (
-                    <span 
-                      key={tech} 
+                    <span
+                      key={tech}
                       className="px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-200 border border-gray-600/30"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex gap-3">
-                  <motion.a 
+                  <motion.a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -118,7 +118,7 @@ export default function Projects() {
                   >
                     <FiExternalLink /> Live Demo
                   </motion.a>
-                  <motion.a 
+                  <motion.a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -141,7 +141,7 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <Link 
+          <Link
             href="/projects"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-500 hover:to-purple-500 transition-all group text-lg font-medium"
           >
